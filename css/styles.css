@@ -14,6 +14,7 @@
   --bg-white-smoke: #eef2f9;
   --light-gray: #f5f7fa;
   --text-gray: #8486ab;
+  --text-secondary-gray: #4e4d55;
   --dark-gray: #130f30;
   --text-light: #c6c7f1;
   --text-light-70: #c6c7f1b2;
@@ -811,29 +812,21 @@ How It Works Section */
 
 Integrations Section */
 .integrations {
-  background-color: #f6faff;
-  padding: 100px 0;
+  background-color: var(--bg-primary-light);
+  padding: 200px 0 64px;
   position: relative;
 }
 
-.integrations::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #f6faff;
-  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.02), 6px 13px 14px rgba(0, 0, 0, 0.02), 14px 29px 20px rgba(0, 0, 0, 0.01),
-    25px 52px 23px rgba(0, 0, 0, 0), 38px 82px 25px rgba(0, 0, 0, 0);
-  border-radius: 40px;
-  z-index: -1;
-}
-
-.integrations .container {
+.integrations-container {
   display: flex;
-  align-items: flex-start;
-  gap: 60px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 109px;
+  padding: 65px 70px;
+  border-radius: 40px;
+  background: var(--bg-secondary-light);
+  box-shadow: 2px 3px 8px 0px #00000005, 6px 13px 14px 0px #00000005, 14px 29px 20px 0px #00000003, 25px 52px 23px 0px #00000000,
+    38px 82px 25px 0px #00000000;
 }
 
 .integrations-content {
@@ -880,9 +873,9 @@ Integrations Section */
   max-width: 602px;
 }
 
-.logo-row {
+.integrations-logo-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 18px;
   align-items: center;
 }
@@ -891,8 +884,9 @@ Integrations Section */
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 14px;
-  background-color: #ffffff;
+  padding: 0 14px;
+  height: 49px;
+  background-color: var(--white);
   border-radius: 4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.04), 0px 2px 1px rgba(0, 0, 0, 0.03), 0px 3px 1px rgba(0, 0, 0, 0.01),
     0px 5px 1px rgba(0, 0, 0, 0);
@@ -905,9 +899,9 @@ Integrations Section */
 
 .integration-card span {
   font-family: "SF Pro Display", sans-serif;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 500;
-  color: #4e4d55;
+  color: var(--text-secondary-gray);
   white-space: nowrap;
 }
 
