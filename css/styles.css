@@ -8,6 +8,7 @@
   --red: #dc0d50;
   --red-hover: #c0094a;
   --red-border: #e40e53;
+  --red-pink: #e5658b;
   --border-gray: #cccccc;
   --red-bg-30: #e40e534d;
   --white: #ffffff;
@@ -787,7 +788,7 @@ How It Works Section */
   padding: 16px 34px;
   border-radius: 60px;
   border: 10px #fff solid;
-  background: linear-gradient(180deg, #e40e53 0%, #e5658b 100%);
+  background: linear-gradient(180deg, var(--red-border) 0%, var(--red-pink) 100%);
   box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.05), inset 0px -1px 1px rgba(255, 255, 255, 0.25),
     inset 0px 1px 1px rgba(255, 255, 255, 0.25);
 }
@@ -853,18 +854,6 @@ Integrations Section */
   line-height: 1.2;
 }
 
-.integrations-content .btn-primary {
-  font-family: "Jost", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  text-transform: uppercase;
-  border-radius: 20px;
-  padding: 15px 20px;
-  background-color: #dc0d50;
-  box-shadow: 0px 2px 5px rgba(220, 12, 81, 0.1), 0px 10px 10px rgba(220, 12, 81, 0.09), 0px 22px 13px rgba(220, 12, 81, 0.05),
-    0px 39px 16px rgba(220, 12, 81, 0.01);
-}
-
 .integrations-logos {
   flex: 1;
   display: flex;
@@ -905,34 +894,59 @@ Integrations Section */
   white-space: nowrap;
 }
 
-/* FAQ Section */
+/* 
+
+
+
+
+
+FAQ Section */
 .faq {
-  background-color: var(--white);
   padding: 80px 0;
   text-align: center;
 }
 
-.faq h2 {
-  font-size: 32px;
-  font-weight: 800;
+.faq-title {
+  font-size: 48px;
+  font-weight: 700;
   margin-bottom: 20px;
+  line-height: 40px;
   color: var(--dark-gray);
 }
 
-.faq-subtitle {
+.faq-text {
   font-size: 16px;
   max-width: 700px;
-  margin: 0 auto 50px;
-  color: var(--text-gray);
+  margin: 0 auto 86px;
+  color: var(--text-dark-medium);
+  line-height: 1.2;
 }
 
 .accordion {
-  max-width: 800px;
+  max-width: 1080px;
   margin: 0 auto;
   text-align: left;
 }
 
-.accordion-item {
+.accordion-item.active .accordion-icon::before {
+  transform: rotate(0deg) scale(0);
+}
+.accordion-item.active .accordion-icon::before,
+.accordion-item.active .accordion-icon::after {
+  background: var(--red-border);
+}
+
+.accordion-item.active .accordion-title {
+  color: var(--red-border);
+}
+.accordion-item.active .accordion-content {
+  display: block;
+}
+.accordion-item.active .accordion-icon {
+  color: var(--red-border);
+}
+
+.accordion-item:not(:last-child) {
   border-bottom: 1px solid #e5e7eb;
   margin-bottom: 15px;
 }
@@ -941,18 +955,41 @@ Integrations Section */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  padding: 20px 0;
   cursor: pointer;
 }
 
-.accordion-header h3 {
-  font-size: 18px;
-  font-weight: 600;
+.accordion-title {
+  font-size: 24px;
+  font-weight: 500;
+  transition: color 0.2s ease 0s;
 }
 
 .accordion-icon {
-  font-size: 24px;
-  color: var(--text-gray);
+  /*color: var(--dark-gray);*/
+  /*transition: transform 0.3s ease 0s;*/
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.accordion-icon::before,
+.accordion-icon::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background: var(--dark-gray);
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.accordion-icon::before {
+  transform: rotate(0deg) scale(1);
+}
+
+.accordion-icon::after {
+  transform: rotate(90deg);
 }
 
 .accordion-content {
@@ -960,13 +997,10 @@ Integrations Section */
   display: none;
 }
 
-.accordion-content.active {
-  display: block;
-}
-
-.accordion-content p {
-  color: var(--text-gray);
-  font-size: 16px;
+.accordion-content {
+  color: var(--text-dark-medium);
+  font-size: 18px;
+  line-height: 1.2;
 }
 
 /* Footer */

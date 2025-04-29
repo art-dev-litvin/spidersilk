@@ -16,25 +16,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Accordion functionality for FAQ section
 document.addEventListener("DOMContentLoaded", function () {
-  const accordionHeaders = document.querySelectorAll(".accordion-header");
+  const accordions = document.querySelectorAll(".accordion");
 
-  accordionHeaders.forEach((header) => {
-    header.addEventListener("click", function () {
-      const accordionItem = this.parentElement;
-      const accordionContent = accordionItem.querySelector(".accordion-content");
-      const accordionIcon = this.querySelector(".accordion-icon");
+  accordions.forEach((accordion) => {
+    const items = accordion.querySelectorAll(".accordion-item");
 
-      // Close all other accordion items
-      document.querySelectorAll(".accordion-content").forEach((content) => {
-        if (content !== accordionContent) {
-          content.classList.remove("active");
-          content.parentElement.querySelector(".accordion-icon").textContent = "+";
-        }
+    items.forEach((item) => {
+      const header = item.querySelector(".accordion-header");
+
+      header.addEventListener("click", () => {
+        // Toggle active class on the clicked item
+        item.classList.toggle("active");
+
+        // Collapse other items if needed (optional)
+        items.forEach((otherItem) => {
+          if (otherItem !== item) {
+            otherItem.classList.remove("active");
+          }
+        });
       });
-
-      // Toggle current accordion item
-      accordionContent.classList.toggle("active");
-      accordionIcon.textContent = accordionContent.classList.contains("active") ? "-" : "+";
     });
   });
 });
