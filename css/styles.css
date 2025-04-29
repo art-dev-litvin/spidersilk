@@ -133,6 +133,21 @@ img {
   box-shadow: 0px 8px 6px 0px #0000000d, 0px 1px 1px 0px #ffffff40 inset, 0px -1px 1px 0px #ffffff40 inset;
 }
 
+.resonance-image {
+  max-width: 645px;
+  transition: transform 0.3s ease 0s;
+  width: 100%;
+  height: 386px;
+}
+
+.resonance-image img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-position: top center;
+  object-fit: cover;
+}
+
 /* 
 
 
@@ -517,23 +532,12 @@ FEATURES
   transform: translateY(-85px);
   position: relative;
   margin: 0 auto 0;
-  max-width: 645px;
-  transition: transform 0.3s ease 0s;
-  width: 100%;
-  height: 386px;
 }
 
 .features__image:hover {
   transform: translateY(-90px);
 }
 
-.features__image img {
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  object-position: top center;
-  object-fit: cover;
-}
 .features__rows {
   padding: 0 60px;
   position: absolute;
@@ -696,37 +700,26 @@ Agentic Security */
 How It Works Section */
 .how-it-works {
   background-color: var(--bg-blue-gray);
-  padding: 100px 0;
+  padding: 120px 0;
+}
+
+.how-it-works-container {
+  max-width: 650px;
+  margin: 0 auto 0;
   text-align: center;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.beam-light {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, #d9daee 0%, rgba(217, 218, 238, 0) 100%);
-  z-index: 1;
-  opacity: 0.5;
-}
-
-.how-it-works .container {
-  position: relative;
-  z-index: 2;
-}
-
-.how-it-works h2 {
+.how-it-works-title {
   font-family: "Jost", sans-serif;
   font-size: 48px;
+  line-height: 40px;
   font-weight: 700;
   margin-bottom: 28px;
-  color: #130f30;
+  color: var(--dark-gray);
   text-transform: uppercase;
-  line-height: 0.8;
 }
 
 .how-it-works-subtitle {
@@ -735,32 +728,30 @@ How It Works Section */
   font-weight: 400;
   color: var(--text-dark-medium);
   max-width: 590px;
-  margin: 0 auto 90px;
   line-height: 1.2;
+  margin: 0 0 90px;
 }
 
-.steps {
+.how-it-works__steps {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 60px;
-  max-width: 640px;
-  margin: 0 auto;
+  gap: 230px;
+  background: url(../images/how-it-works/beam-bg.png) no-repeat 50% 45% / 406px 478px;
 }
 
-.step {
+.how-it-works__step {
   text-align: center;
 }
 
-.step-header {
+.how-it-works__step-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 34px;
 }
 
-.step-number {
+.how-it-works__step-number {
   width: 60px;
   height: 60px;
   background-color: var(--bg-white-smoke);
@@ -775,83 +766,50 @@ How It Works Section */
   box-shadow: 0px 2px 4px 0px #6666661a, 0px 7px 7px 0px #66666617;
 }
 
-.step-title {
+.how-it-works__step-title {
   font-family: "Jost", sans-serif;
   font-size: 24px;
   font-weight: 400;
   color: #7085a2;
   letter-spacing: 6px;
   text-transform: uppercase;
-  line-height: 100%;
+  line-height: 1.2;
 }
 
-.search-box {
+.how-it-works-search {
   display: flex;
-  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
   max-width: 620px;
-  margin: 0 auto;
+  margin: 34px auto 0;
   padding: 16px 34px;
-  border-radius: 40px;
-  overflow: hidden;
-  border: 4px #fff solid;
+  border-radius: 60px;
+  border: 10px #fff solid;
   background: linear-gradient(180deg, #e40e53 0%, #e5658b 100%);
   box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.05), inset 0px -1px 1px rgba(255, 255, 255, 0.25),
     inset 0px 1px 1px rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(50px);
 }
 
-.company-input {
-  flex: 1;
-  border: none;
-  font-family: "SF Pro Display", sans-serif;
-  font-size: 32px;
+.how-it-works-search-text {
   font-weight: 500;
-  color: #ffffff;
-  background: transparent;
-  outline: none;
+  font-size: 32px;
+  line-height: 32px;
+  color: var(--white);
 }
 
-.company-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.search-button {
-  flex: 0 0 40px;
+.how-it-works-search-icon {
+  width: 40px;
   height: 40px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-right: 20px;
 }
 
-.search-button img {
-  width: 30px;
-  height: 30px;
-  filter: brightness(0) invert(1);
-}
+/*
 
-.resonance-image {
-  margin-top: 20px;
-  width: 100%;
-  border-radius: 20px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.05), inset 0px 1px 1px rgba(255, 255, 255, 0.25),
-    inset 0px -1px 1px rgba(255, 255, 255, 0.25), 2px 4px 11px rgba(95, 103, 114, 0.1), 9px 18px 20px rgba(95, 103, 114, 0.09),
-    20px 40px 27px rgba(95, 103, 114, 0.05), 35px 72px 32px rgba(95, 103, 114, 0.01);
-  backdrop-filter: blur(100px);
-}
 
-.resonance-image img {
-  width: 100%;
-  display: block;
-  border-radius: 10px;
-}
 
-/* Integrations Section */
+
+
+Integrations Section */
 .integrations {
   background-color: #f6faff;
   padding: 100px 0;
