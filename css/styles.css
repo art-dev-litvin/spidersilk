@@ -15,6 +15,7 @@
   --bg-white-smoke: #eef2f9;
   --light-gray: #f5f7fa;
   --text-gray: #8486ab;
+  --text-smoke-gray: #edededcc;
   --text-secondary-gray: #4e4d55;
   --dark-gray: #130f30;
   --text-light: #c6c7f1;
@@ -26,6 +27,7 @@
   --bg-primary-light: #f1f6fe;
   --bg-secondary-light: #f6faff;
   --bg-blue-gray: #dce5f2;
+  --bg-blue-gray-20: #d9d9d933;
 
   /* Feature Icon Colors */
   --orange: #f96342;
@@ -74,6 +76,10 @@ ul {
 img {
   max-width: 100%;
   height: auto;
+}
+input {
+  border: none;
+  outline: none;
 }
 
 /* Button Styles */
@@ -945,54 +951,117 @@ FAQ Section */
 Footer */
 .footer {
   background-color: #12286f;
-  color: rgba(237, 237, 237, 0.8);
   padding: 20px 0;
   position: relative;
 }
 .footer__curved {
   z-index: 1;
   top: -110px;
-  height: 540px;
+  height: 120px;
   background: url(../images/footer/ellipse-1.svg) center 0 / 130% no-repeat;
 }
 .footer__curved-line {
   z-index: 0;
-  top: -112px;
-  height: 540px;
-  background: url(../images/footer/ellipse-2.svg) center 0 / 130% no-repeat;
+  top: -110px;
+  height: 120px;
+  background: url(../images/footer/ellipse-2.svg) center -3px / 130% no-repeat;
 }
 
 .footer-container {
   display: flex;
   gap: 117px;
   position: relative;
+  padding: 0 10px;
   z-index: 10;
+  color: var(--text-smoke-gray);
 }
 
 .footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  flex: 0 0 420px;
 }
 
-.footer-logo-section {
+.footer-left__content {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.footer-logo-img {
-  height: 45px;
-  margin-bottom: 15px;
-  display: block;
+.footer-left__logo {
+  max-width: 186px;
+  height: 30px;
+  display: inline-block;
 }
 
-.footer-logo-section p {
+.footer-left__logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-left__text {
   font-family: "SF Pro Display", sans-serif;
   font-size: 14px;
+
   line-height: 1.2;
-  font-weight: 400;
-  max-width: 300px;
+}
+
+.footer-left__social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-left__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-left__social-link img {
+  width: 34px;
+  height: 34px;
+}
+
+.footer__newsletter {
+  margin-top: 40px;
+}
+.footer__newsletter-title {
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer__newsletter-form {
+  position: relative;
+  max-width: 420px;
+  height: 47px;
+}
+
+.footer__newsletter-input {
+  background-color: var(--bg-blue-gray-20);
+  color: var(--text-smoke-gray);
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 0px 15px;
+  border-radius: 20px;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 14px;
+}
+.footer__newsletter-input::placeholder {
+  color: var(--text-smoke-gray);
+}
+
+.footer__newsletter-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 0 20px 20px 0;
+}
+
+.footer__newsletter-button img {
+  width: 24px;
+  height: 20px;
 }
 
 .footer-right {
@@ -1000,111 +1069,41 @@ Footer */
   gap: 100px;
 }
 
-.footer-column h4 {
+.footer-right__contact-email a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-right__contact-email a span {
+  text-decoration: underline;
+}
+
+.footer-right__contact-email img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-right__column-title {
   font-family: "SF Pro Display", sans-serif;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: rgba(237, 237, 237, 0.8);
 }
 
-.footer-column ul {
+.footer-right__column-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.footer-column a {
+.footer-right__column-list-item a {
   font-family: "SF Pro Display", sans-serif;
   font-size: 14px;
-  font-weight: 400;
-  color: rgba(237, 237, 237, 0.8);
-  transition: opacity 0.3s ease;
+  transition: color 0.3s ease 0s;
 }
 
-.footer-column a:hover {
-  opacity: 1;
-}
-
-.newsletter h4 {
-  font-family: "SF Pro Display", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: rgba(237, 237, 237, 0.8);
-}
-
-.newsletter-form {
-  display: flex;
-  position: relative;
-  width: 100%;
-  max-width: 300px;
-}
-
-.newsletter-input {
-  flex: 1;
-  background-color: rgba(217, 217, 217, 0.2);
-  border: none;
-  padding: 12px 15px;
-  color: rgba(237, 237, 237, 0.8);
-  border-radius: 20px;
-  outline: none;
-  font-family: "SF Pro Display", sans-serif;
-  font-size: 14px;
-  width: 100%;
-}
-
-.newsletter-input::placeholder {
-  color: rgba(237, 237, 237, 0.8);
-}
-
-.newsletter-button {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: #e40e53;
-  border: none;
-  padding: 0 15px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0 20px 20px 0;
-}
-
-.newsletter-button img {
-  width: 20px;
-  height: 20px;
-}
-
-.social-links {
-  display: flex;
-  gap: 15px;
-  margin-top: 10px;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.social-link img {
-  width: 24px;
-  height: 24px;
-}
-
-.contact-email {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.contact-email img {
-  width: 24px;
-  height: 24px;
+.footer-right__column-list-item a:hover {
+  color: var(--bg-white-smoke);
 }
 
 /* Responsive Design */
