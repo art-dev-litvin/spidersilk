@@ -4,6 +4,8 @@
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 70px;
+  position: relative;
+  z-index: 100;
 }
 
 /* Button Styles */
@@ -80,6 +82,9 @@
 
 .main {
   position: relative;
+  margin-top: -50px;
+  min-height: 800px;
+  padding-top: 30px;
 }
 .main__curved {
   background: url(../images/main/ellipse-1.svg) center 0 / cover no-repeat;
