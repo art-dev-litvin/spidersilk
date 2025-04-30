@@ -201,12 +201,12 @@ How It Works Section */
 .how-it-works__curved {
   z-index: -1;
   top: -70px;
-  background: url(../images/how-it-works/ellipse-1.svg) center 0 / cover no-repeat;
+  background: url(../../images/how-it-works/ellipse-1.svg) center 0 / cover no-repeat;
 }
 .how-it-works__curved-line {
   z-index: -2;
   top: -75px;
-  background: url(../images/how-it-works/ellipse-2.svg) center 0 / cover no-repeat;
+  background: url(../../images/how-it-works/ellipse-2.svg) center 0 / cover no-repeat;
 }
 
 .how-it-works-container {
@@ -242,8 +242,8 @@ How It Works Section */
   display: flex;
   flex-direction: column;
   gap: 230px;
-  background: url(../images/how-it-works/cursor-arrow.svg) no-repeat 80% 28% / auto,
-    url(../images/how-it-works/beam-bg.png) no-repeat 50% 45% / 406px 478px;
+  background: url(../../images/how-it-works/cursor-arrow.svg) no-repeat 80% 28% / auto,
+    url(../../images/how-it-works/beam-bg.png) no-repeat 50% 45% / 406px 478px;
 }
 
 .how-it-works__step {
@@ -326,12 +326,12 @@ Integrations Section */
 .integrations__curved {
   z-index: 1;
   top: -110px;
-  background: url(../images/integrations/ellipse-1.svg) center 0 / cover no-repeat;
+  background: url(../../images/integrations/ellipse-1.svg) center 0 / cover no-repeat;
 }
 .integrations__curved-line {
   z-index: 0;
   top: -110px;
-  background: url(../images/integrations/ellipse-2.svg) center 0 / cover no-repeat;
+  background: url(../../images/integrations/ellipse-2.svg) center 0 / cover no-repeat;
 }
 
 .integrations-container {
