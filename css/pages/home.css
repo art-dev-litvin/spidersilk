@@ -8,6 +8,8 @@ FEATURES
   z-index: 1000;
   border-radius: 20px;
   height: 830px;
+  margin-top: 20px;
+  background: var(--light-blue);
 }
 .features__circles-bg {
   position: absolute;
@@ -326,11 +328,13 @@ Integrations Section */
   z-index: 1;
   top: -110px;
   background: url(../../images/integrations/ellipse-1.svg) center 0 / cover no-repeat;
+  height: 200px;
 }
 .integrations__curved-line {
   z-index: 0;
   top: -110px;
   background: url(../../images/integrations/ellipse-2.svg) center 0 / cover no-repeat;
+  height: 200px;
 }
 
 .integrations-container {
