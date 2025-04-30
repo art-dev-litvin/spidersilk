@@ -1,0 +1,76 @@
+/* Base Styles */
+:root {
+  /* Colors */
+  --primary-blue: #0e0eb2;
+  --secondary-blue: #0952cf;
+  --dark-blue: #06064c;
+  --light-blue: #f1f6fe;
+  --red: #dc0d50;
+  --red-hover: #c0094a;
+  --red-border: #e40e53;
+  --red-pink: #e5658b;
+  --border-gray: #cccccc;
+  --red-bg-30: #e40e534d;
+  --white: #ffffff;
+  --bg-white-smoke: #eef2f9;
+  --light-gray: #f5f7fa;
+  --text-gray: #8486ab;
+  --text-smoke-gray: #edededcc;
+  --text-secondary-gray: #4e4d55;
+  --dark-gray: #130f30;
+  --text-light: #c6c7f1;
+  --text-light-70: #c6c7f1b2;
+  --text-dark-medium: #333047;
+  --gray-medium: #adadad;
+  --text-primary-light: #e8e8e8;
+  --bg-transparent-hover: rgba(255, 255, 255, 0.1);
+  --bg-primary-light: #f1f6fe;
+  --bg-secondary-light: #f6faff;
+  --bg-blue-gray: #dce5f2;
+  --bg-blue-gray-20: #d9d9d933;
+
+  /* Feature Icon Colors */
+  --orange: #f96342;
+  --pink: #f9427c;
+  --purple: #8542f9;
+  --yellow: #f9b942;
+  --blue: #42a4f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "SF Pro Display", "Inter", sans-serif;
+  color: var(--dark-gray);
+  background: var(--bg-primary-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+input {
+  border: none;
+  outline: none;
+}

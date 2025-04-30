@@ -1,0 +1,79 @@
+/* Сontainer Styles */
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 70px;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+  border-radius: 20px;
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.45;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  height: 53px;
+}
+
+.btn-primary {
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+  box-shadow: 0px 2px 5px 0px #dc0c511a, 0px 10px 10px 0px #dc0c5117, 0px 22px 13px 0px #dc0c510d, 0px 39px 16px 0px #dc0c5103,
+    0px 61px 17px 0px #dc0c5100;
+}
+
+.btn-primary:hover {
+  background-color: var(--red-hover);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-light);
+  border: 1px solid var(--text-light-70);
+  margin-left: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-outline:hover {
+  background-color: var(--bg-transparent-hover);
+}
+
+.glass-border-wrapper {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 20px;
+  backdrop-filter: blur(3px);
+  box-shadow: 0px 8px 6px 0px #0000000d, 0px 1px 1px 0px #ffffff40 inset, 0px -1px 1px 0px #ffffff40 inset;
+}
+
+.resonance-image {
+  max-width: 645px;
+  transition: transform 0.3s ease 0s;
+  width: 100%;
+  height: 386px;
+}
+
+.resonance-image img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-position: top center;
+  object-fit: cover;
+}
+.curved-ellipse {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 600px;
+}
