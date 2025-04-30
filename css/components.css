@@ -77,3 +77,12 @@
   width: 100%;
   height: 600px;
 }
+
+.main__curved {
+  background: url(../images/main/ellipse-1.svg) center 0 / cover no-repeat;
+  z-index: -1;
+}
+.main__curved-line {
+  background: url(../images/main/ellipse-2.svg) center 0 / cover no-repeat;
+  z-index: -2;
+}

@@ -21,15 +21,6 @@ FEATURES
   width: 1400px;
 }
 
-.features__curved {
-  background: url(../images/features/ellipse-1.svg) center 0 / cover no-repeat;
-  z-index: -1;
-}
-.features__curved-line {
-  background: url(../images/features/ellipse-2.svg) center 0 / cover no-repeat;
-  z-index: -2;
-}
-
 .features__image {
   z-index: 20;
   transform: translateY(-110px);

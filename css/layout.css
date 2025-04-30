@@ -155,13 +155,17 @@ HEADER
 HERO 
 */
 .hero {
-  background: url(../images/hero/bg-dark.png) center / cover no-repeat;
+  background: url(../images/hero/bg.png) center / cover no-repeat;
 
   color: var(--white);
   padding: 260px 0 0;
   position: relative;
   overflow: hidden;
   height: 933px;
+}
+
+.hero-bg-dark {
+  background: url(../images/hero/bg-dark.png) center / cover no-repeat;
 }
 
 .hero-cta__watch-demo img {
