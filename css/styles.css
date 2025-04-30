@@ -149,6 +149,13 @@ img {
   object-position: top center;
   object-fit: cover;
 }
+.curved-ellipse {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 600px;
+}
 
 /* 
 
@@ -309,7 +316,8 @@ HEADER
 HERO 
 */
 .hero {
-  background-color: var(--light-blue);
+  background: url(../images/hero/bg-dark.png) center / cover no-repeat;
+
   color: var(--white);
   padding: 260px 0 0;
   position: relative;
@@ -319,7 +327,7 @@ HERO
 
 .hero-blub-bg {
   position: absolute;
-  bottom: -36%;
+  bottom: -33%;
   left: 50%;
   transform: translate(-50%, 0);
   margin: 0 auto 0;
@@ -329,112 +337,11 @@ HERO
   object-fit: contain;
 }
 
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.hero-background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 20% 30%, var(--primary-blue), var(--dark-blue));
-  z-index: 1;
-}
-
-.hero-circles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-}
-
-.hero-circles::before,
-.hero-circles::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  border: 3px solid;
-  opacity: 0.3;
-}
-
-.hero-circles::before {
-  width: 600px;
-  height: 600px;
-  top: -150px;
-  left: -100px;
-  border-color: #d7e5fb;
-}
-
-.hero-circles::after {
-  width: 400px;
-  height: 400px;
-  top: 50px;
-  right: -100px;
-  border-color: #d7e5fb;
-  opacity: 0.2;
-}
-
-.hero-blur {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-}
-
-.hero-blur::before,
-.hero-blur::after {
-  content: "";
-  position: absolute;
-  filter: blur(100px);
-  opacity: 0.4;
-}
-
-.hero-blur::before {
-  width: 300px;
-  height: 300px;
-  top: 100px;
-  left: 200px;
-  background-color: #ff574a;
-  border-radius: 50%;
-}
-
-.hero-blur::after {
-  width: 250px;
-  height: 250px;
-  bottom: 50px;
-  right: 100px;
-  background-color: #8822ee;
-  border-radius: 50%;
-}
-
 .hero .container {
   position: relative;
   z-index: 5;
   display: flex;
   flex-wrap: wrap;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 80px;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(to bottom right, var(--dark-blue) 49.5%, var(--light-blue) 50%);
 }
 
 .hero-title {
@@ -444,7 +351,7 @@ HERO
   line-height: 1;
   margin-bottom: 18px;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--text-primary-light);
 }
 
 .hero-content {
@@ -454,6 +361,7 @@ HERO
 .hero-description {
   font-family: "SF Pro Display", sans-serif;
   font-size: 22px;
+  line-height: 1.2;
   font-weight: 400;
   margin-bottom: 18px;
   color: var(--text-light);
@@ -518,26 +426,25 @@ FEATURES
   height: 940px;
   width: 1400px;
 }
+
 .features__curved {
-  background: var(--bg-primary-light);
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  border-radius: 50% 50% 0 0;
+  background: url(../images/features/ellipse-1.svg) center 0 / cover no-repeat;
   z-index: -1;
+}
+.features__curved-line {
+  background: url(../images/features/ellipse-2.svg) center 0 / cover no-repeat;
+  z-index: -2;
 }
 
 .features__image {
   z-index: 20;
-  transform: translateY(-85px);
+  transform: translateY(-110px);
   position: relative;
   margin: 0 auto 0;
 }
 
 .features__image:hover {
-  transform: translateY(-90px);
+  transform: translateY(-115px);
 }
 
 .features__rows {
@@ -565,7 +472,7 @@ FEATURES
 }
 
 .features__feature {
-  max-width: 150px;
+  max-width: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -602,7 +509,7 @@ Agentic Security */
 
 .agentic-security {
   position: relative;
-  margin-bottom: 110px;
+  margin-bottom: 155px;
 }
 
 .agentic-container {
@@ -702,7 +609,19 @@ Agentic Security */
 How It Works Section */
 .how-it-works {
   background-color: var(--bg-blue-gray);
-  padding: 120px 0;
+  padding: 60px 0 220px;
+  position: relative;
+}
+
+.how-it-works__curved {
+  z-index: -1;
+  top: -70px;
+  background: url(../images/how-it-works/ellipse-1.svg) center 0 / cover no-repeat;
+}
+.how-it-works__curved-line {
+  z-index: -2;
+  top: -75px;
+  background: url(../images/how-it-works/ellipse-2.svg) center 0 / cover no-repeat;
 }
 
 .how-it-works-container {
@@ -738,7 +657,8 @@ How It Works Section */
   display: flex;
   flex-direction: column;
   gap: 230px;
-  background: url(../images/how-it-works/beam-bg.png) no-repeat 50% 45% / 406px 478px;
+  background: url(../images/how-it-works/cursor-arrow.svg) no-repeat 80% 28% / auto,
+    url(../images/how-it-works/beam-bg.png) no-repeat 50% 45% / 406px 478px;
 }
 
 .how-it-works__step {
@@ -814,14 +734,27 @@ How It Works Section */
 Integrations Section */
 .integrations {
   background-color: var(--bg-primary-light);
-  padding: 200px 0 64px;
+  padding: 30px 0 64px;
   position: relative;
+}
+
+.integrations__curved {
+  z-index: 1;
+  top: -110px;
+  background: url(../images/integrations/ellipse-1.svg) center 0 / cover no-repeat;
+}
+.integrations__curved-line {
+  z-index: 0;
+  top: -110px;
+  background: url(../images/integrations/ellipse-2.svg) center 0 / cover no-repeat;
 }
 
 .integrations-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 10;
   gap: 109px;
   padding: 65px 70px;
   border-radius: 40px;
@@ -902,8 +835,9 @@ Integrations Section */
 
 FAQ Section */
 .faq {
-  padding: 80px 0;
+  padding: 80px 0 210px;
   text-align: center;
+  background: var(--bg-primary-light);
 }
 
 .faq-title {
@@ -1003,16 +937,36 @@ FAQ Section */
   line-height: 1.2;
 }
 
-/* Footer */
+/* 
+
+
+
+
+Footer */
 .footer {
   background-color: #12286f;
   color: rgba(237, 237, 237, 0.8);
-  padding: 60px 0;
+  padding: 20px 0;
+  position: relative;
+}
+.footer__curved {
+  z-index: 1;
+  top: -110px;
+  height: 540px;
+  background: url(../images/footer/ellipse-1.svg) center 0 / 130% no-repeat;
+}
+.footer__curved-line {
+  z-index: 0;
+  top: -112px;
+  height: 540px;
+  background: url(../images/footer/ellipse-2.svg) center 0 / 130% no-repeat;
 }
 
 .footer-container {
   display: flex;
   gap: 117px;
+  position: relative;
+  z-index: 10;
 }
 
 .footer-left {
