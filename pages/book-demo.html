@@ -31,7 +31,7 @@
         </div>
         <nav class="navbar">
           <div class="logo">
-            <a href="#">
+            <a href="/pages/index.html">
               <img src="../images/spidersilk-logo.svg" alt="SpiderSilk Logo" class="logo-img" />
             </a>
           </div>
@@ -60,9 +60,107 @@
       <div class="main__curved curved-ellipse"></div>
       <div class="main__curved-line curved-ellipse"></div>
 
-      <!-- Features Section -->
+      <!-- Book-demo Section -->
       <section class="book-demo">
-        <div class="container">hello</div>
+        <div class="book-demo-container container">
+          <form class="book-demo-form">
+            <!-- Row 1 -->
+            <div class="demo-form__row">
+              <label for="name" class="demo-form__label">Name*</label>
+              <div class="demo-form__input-wrapper">
+                <input type="text" id="name" name="name" class="demo-form__input" placeholder="Alex Green" />
+                <span class="demo-form__icon"><img src="../images/success-mark.svg" alt="success mark" /></span>
+              </div>
+              <span class="demo-form__error"
+                ><img src="../images/vulnerability-filled-icon.svg" alt="vulnerability" /><span></span
+              ></span>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="demo-form__row">
+              <label for="email" class="demo-form__label">Company name*</label>
+              <div class="demo-form__input-wrapper">
+                <input type="email" id="email" name="email" class="demo-form__input" placeholder="Acme Inc" />
+                <span class="demo-form__icon"><img src="../images/success-mark.svg" alt="success mark" /></span>
+              </div>
+              <span class="demo-form__error"
+                ><img src="../images/vulnerability-filled-icon.svg" alt="vulnerability" /><span></span
+              ></span>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="demo-form__row">
+              <label for="company" class="demo-form__label">Business email*</label>
+              <div class="demo-form__input-wrapper">
+                <input type="text" id="company" name="company" class="demo-form__input" placeholder="alex@acme.com" />
+                <span class="demo-form__icon"><img src="../images/success-mark.svg" alt="success mark" /></span>
+              </div>
+              <span class="demo-form__error"
+                ><img src="../images/vulnerability-filled-icon.svg" alt="vulnerability" /><span></span
+              ></span>
+            </div>
+
+            <!-- Phone Block -->
+            <div class="demo-form__row">
+              <label for="phone" class="demo-form__label">Phone Number</label>
+              <div class="demo-form__phone-wrapper">
+                <div class="demo-form__select-wrapper">
+                  <img class="demo-form__select-country-icon" src="../images/countries-select/1.svg" alt="unknown country" />
+                  <img class="demo-form__select-arrow" src="../images/arrow-down.svg" alt="arrow-down" />
+
+                  <select id="country-code" name="country-code" class="demo-form__select">
+                    <option selected value="+971">+971</option>
+                    <option value="+44">+44</option>
+                    <option value="+91">+91</option>
+                  </select>
+                </div>
+                <input type="tel" id="phone" name="phone" class="demo-form__input" placeholder="569913445" />
+              </div>
+              <span class="demo-form__error"
+                ><img src="../images/vulnerability-filled-icon.svg" alt="vulnerability" /><span></span
+              ></span>
+            </div>
+
+            <!-- Textarea -->
+            <div class="demo-form__row">
+              <label for="message" class="demo-form__label">Message (Optional)</label>
+              <textarea id="message" name="message" class="demo-form__textarea" placeholder="Your message here"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="demo-form__row">
+              <button type="submit" class="demo-form__button btn btn-primary">Request My Free Demo</button>
+            </div>
+          </form>
+
+          <div class="demo-benefits">
+            <div class="demo-benefits__image resonance-image glass-border-wrapper">
+              <img src="../images/dashboard-resonance.png" alt="dashboard-resonance" />
+            </div>
+            <div class="demo-benefits__content">
+              <h3 class="demo-benefits__title">key benefits</h3>
+              <p class="demo-benefits__subtitle">What You'll Learn in Your Free Demo:</p>
+              <ul class="demo-benefits__list">
+                <li class="demo-benefits__list-item">
+                  <span class="demo-benefits__list-item-icon complete-mark"></span>
+                  <p>How to identify hidden risks before they impact your business</p>
+                </li>
+                <li class="demo-benefits__list-item">
+                  <span class="demo-benefits__list-item-icon complete-mark"></span>
+                  <p>How Resonance accelerates threat detection and response</p>
+                </li>
+                <li class="demo-benefits__list-item">
+                  <span class="demo-benefits__list-item-icon complete-mark"></span>
+                  <p>How to monitor third-party exposures and dark web leaks effortlessly</p>
+                </li>
+                <li class="demo-benefits__list-item">
+                  <span class="demo-benefits__list-item-icon complete-mark"></span>
+                  <p>How to improve your brand's security posture</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 

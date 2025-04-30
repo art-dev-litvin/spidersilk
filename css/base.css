@@ -14,7 +14,9 @@
   --white: #ffffff;
   --bg-white-smoke: #eef2f9;
   --light-gray: #f5f7fa;
+  --select-color: #403a6e;
   --text-gray: #8486ab;
+  --text-placeholder: #c3c9de;
   --text-smoke-gray: #edededcc;
   --text-secondary-gray: #4e4d55;
   --dark-gray: #130f30;
@@ -28,6 +30,9 @@
   --bg-secondary-light: #f6faff;
   --bg-blue-gray: #dce5f2;
   --bg-blue-gray-20: #d9d9d933;
+  --bg-light-blue: #e5effa;
+  --bg-light-blue-secondary: #7fa6d5;
+  --success-green: #30c746;
 
   /* Feature Icon Colors */
   --orange: #f96342;
@@ -70,7 +75,9 @@ img {
   max-width: 100%;
   height: auto;
 }
-input {
+input,
+select,
+textarea {
   border: none;
   outline: none;
 }
