@@ -1,6 +1,10 @@
 .book-demo {
-  padding-top: 125px;
+  padding-top: 105px;
   padding-bottom: 220px;
+  margin-top: 20px;
+  background: #f1f6fe;
+  position: relative;
+  z-index: 10;
 }
 .book-demo-container {
   /*padding: 0 135px;*/
