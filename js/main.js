@@ -1,8 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
+  initializeBurger();
+
   initializeAccordion();
 
   initializeBookDemoForm();
 });
+
+function initializeBurger() {
+  const burger = document.querySelector(".burger");
+  const burgerMenu = document.querySelector(".burger-menu");
+
+  if (burger && burgerMenu) {
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      burgerMenu.classList.toggle("active");
+      document.body.classList.toggle("locked");
+    });
+  }
+}
 
 function initializeAccordion() {
   const accordions = document.querySelectorAll(".accordion");
