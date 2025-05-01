@@ -18,25 +18,25 @@ FEATURES
   z-index: 0;
   left: 50%;
   top: -16%;
-  height: 940px;
+  height: 900px;
   width: 1400px;
 }
 
 .features__image {
   z-index: 20;
-  transform: translateY(-110px);
+  transform: translateY(-165px);
   position: relative;
   margin: 0 auto 0;
 }
 
 .features__image:hover {
-  transform: translateY(-115px);
+  transform: translateY(-170px);
 }
 
 .features__rows {
   padding: 0 50px;
   position: absolute;
-  top: 80px;
+  top: 40px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
