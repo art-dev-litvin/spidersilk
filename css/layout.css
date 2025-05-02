@@ -277,7 +277,8 @@ HEADER
 HERO 
 */
 .hero {
-  background: url(../images/hero/bg.jpg) center / cover no-repeat;
+  background: url(../images/hero/bg.jpg) center / cover no-repeat,
+    radial-gradient(ellipse at bottom right, rgba(0, 80, 160, 0.1) 0%, transparent 60%), linear-gradient(to right, #1517a0, #0e105b);
 
   color: var(--white);
   padding: 260px 0 0;
@@ -301,7 +302,10 @@ HERO
 }
 
 .hero_bg-dark {
-  background: url(../images/hero/bg-dark.jpg) center / cover no-repeat;
+  background: url(../images/hero/bg-dark.jpg) center / cover no-repeat,
+    radial-gradient(ellipse at bottom right, rgba(0, 150, 255, 0.2) 0%, transparent 60%),
+    radial-gradient(ellipse at top left, rgba(128, 0, 255, 0.3) 0%, transparent 70%),
+    linear-gradient(to bottom right, #0b0f2e, #10203f, #0d2a4d);
 }
 
 .hero-cta__watch-demo img {
