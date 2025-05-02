@@ -75,7 +75,7 @@ function onSubmitBookDemoForm(event) {
   });
 
   if (isValid) {
-    console.log("Form submitted with data:", data);
+    window.location.href = "/pages/thank-you.html";
   } else {
     console.log("Form validation failed.");
   }

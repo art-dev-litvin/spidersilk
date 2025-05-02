@@ -277,7 +277,7 @@ HEADER
 HERO 
 */
 .hero {
-  background: url(../images/hero/bg.png) center / cover no-repeat;
+  background: url(../images/hero/bg.jpg) center / cover no-repeat;
 
   color: var(--white);
   padding: 260px 0 0;
@@ -301,7 +301,7 @@ HERO
 }
 
 .hero_bg-dark {
-  background: url(../images/hero/bg-dark.png) center / cover no-repeat;
+  background: url(../images/hero/bg-dark.jpg) center / cover no-repeat;
 }
 
 .hero-cta__watch-demo img {
@@ -560,6 +560,10 @@ Footer */
   border-radius: 20px;
   font-family: "SF Pro Display", sans-serif;
   font-size: 14px;
+  transition: box-shadow 0.2s ease 0s;
+}
+.footer__newsletter-input:focus {
+  box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.4);
 }
 .footer__newsletter-input::placeholder {
   color: var(--text-smoke-gray);
