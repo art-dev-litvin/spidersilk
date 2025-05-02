@@ -68,7 +68,7 @@
             <div class="demo-form__row">
               <label for="name" class="demo-form__label">Name*</label>
               <div class="demo-form__input-wrapper">
-                <input type="text" id="name" name="name" class="demo-form__input" placeholder="Alex Green" />
+                <input type="text" id="demo-form-name-input" name="name" class="demo-form__input" placeholder="Alex Green" />
                 <span class="demo-form__icon"><img src="../images/success-mark.svg" alt="success mark" /></span>
               </div>
               <span class="demo-form__error"
@@ -82,8 +82,8 @@
               <div class="demo-form__input-wrapper">
                 <input
                   type="text"
-                  id="demo-form-company-name"
-                  name="demo-form-company-name"
+                  id="demo-form-company-input"
+                  name="demo-form-company"
                   class="demo-form__input"
                   placeholder="Acme Inc"
                 />
@@ -98,7 +98,7 @@
             <div class="demo-form__row">
               <label for="company" class="demo-form__label">Business email*</label>
               <div class="demo-form__input-wrapper">
-                <input type="email" id="company" name="company" class="demo-form__input" placeholder="alex@acme.com" />
+                <input type="email" id="demo-form-email-input" name="company" class="demo-form__input" placeholder="alex@acme.com" />
                 <span class="demo-form__icon"><img src="../images/success-mark.svg" alt="success mark" /></span>
               </div>
               <span class="demo-form__error"
@@ -120,7 +120,10 @@
                     <option value="+91">+91</option>
                   </select>
                 </div>
-                <input type="tel" id="phone" name="phone" class="demo-form__input" placeholder="569913445" />
+                <div class="demo-form__input-wrapper">
+                  <input type="tel" id="demo-form-phone-input" name="phone" class="demo-form__input" placeholder="569913445" />
+                  <span class="demo-form__icon"><img src="../images/success-mark.svg" alt="success mark" /></span>
+                </div>
               </div>
               <span class="demo-form__error"
                 ><img src="../images/vulnerability-filled-icon.svg" alt="vulnerability" /><span></span

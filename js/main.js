@@ -87,29 +87,35 @@ function validateInput(inputElement) {
   let isValid = true;
 
   // Validation logic based on input type or ID
-  if (inputElement.id === "name") {
+  if (inputElement.id === "demo-form-name-input") {
     if (!value) {
       markInvalid(row, "Name is required.");
       isValid = false;
     } else {
       markValid(row);
     }
-  } else if (inputElement.id === "email") {
+  } else if (inputElement.id === "demo-form-company-input") {
     if (!value) {
       markInvalid(row, "Company name is required.");
       isValid = false;
     } else {
       markValid(row);
     }
-  } else if (inputElement.id === "company") {
-    if (!isValidEmail(value)) {
-      markInvalid(row, "A valid business email is required.");
+  } else if (inputElement.id === "demo-form-email-input") {
+    if (!value) {
+      markInvalid(row, "Business email is required.");
+      isValid = false;
+    } else if (!isValidEmail(value)) {
+      markInvalid(row, "Business email is wrong");
       isValid = false;
     } else {
       markValid(row);
     }
-  } else if (inputElement.id === "phone") {
-    if (value && !isValidPhone(value)) {
+  } else if (inputElement.id === "demo-form-phone-input") {
+    if (!value) {
+      markInvalid(row, "Phone number is required.");
+      isValid = false;
+    } else if (value && !isValidPhone(value)) {
       markInvalid(row, "Phone number is invalid.");
       isValid = false;
     } else {
