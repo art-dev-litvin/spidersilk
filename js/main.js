@@ -1,10 +1,61 @@
 document.addEventListener("DOMContentLoaded", function () {
   initializeBurger();
 
+  initializeLazyVideos();
+  initializeAgenticVideoControls();
+
   initializeAccordion();
 
   initializeBookDemoForm();
 });
+
+function initializeAgenticVideoControls() {
+  const videos = document.querySelectorAll(".agentic-video > video");
+
+  videos.forEach((video) => {
+    const playButton = video.closest(".agentic-video").querySelector(".agentic-play-button");
+
+    if (playButton) {
+      video.controls = false;
+
+      playButton.addEventListener("click", () => {
+        video.controls = true;
+        video.currentTime = 0;
+        video.muted = false;
+        video.play();
+        playButton.classList.add("hidden");
+      });
+
+      video.addEventListener("ended", () => {
+        playButton.classList.remove("hidden");
+      });
+    }
+  });
+}
+
+function initializeLazyVideos() {
+  const lazyVideos = document.querySelectorAll(".lazy-video");
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const video = entry.target;
+          const source = document.createElement("source");
+          source.src = video.dataset.src;
+          source.type = "video/mp4";
+          video.appendChild(source);
+          video.load();
+          video.play();
+          obs.unobserve(video);
+        }
+      });
+    },
+    { threshold: 0.25 }
+  );
+
+  lazyVideos.forEach((video) => observer.observe(video));
+}
 
 function initializeBurger() {
   const burger = document.querySelector(".burger");
