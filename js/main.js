@@ -27,15 +27,29 @@ function initializeAccordion() {
 
     items.forEach((item) => {
       const header = item.querySelector(".accordion-header");
+      const content = item.querySelector(".accordion-content");
 
       header.addEventListener("click", () => {
-        // Toggle active class on the clicked item
+        const isActive = item.classList.contains("active");
+
+        // Toggle active class
         item.classList.toggle("active");
 
-        // Collapse other items if needed (optional)
+        if (isActive) {
+          // Collapse the content
+          content.style.maxHeight = null;
+        } else {
+          // Expand the content
+          const paddingSize = 20;
+          content.style.maxHeight = content.scrollHeight + paddingSize + "px";
+        }
+
+        // Optionally collapse other items
         items.forEach((otherItem) => {
           if (otherItem !== item) {
             otherItem.classList.remove("active");
+            const otherContent = otherItem.querySelector(".accordion-content");
+            otherContent.style.maxHeight = null;
           }
         });
       });

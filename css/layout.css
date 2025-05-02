@@ -5,7 +5,7 @@ HEADER
 */
 .header {
   position: absolute;
-  z-index: 10;
+  z-index: 1000;
   width: 100%;
 }
 
@@ -320,11 +320,24 @@ HERO
   height: 600px;
   z-index: 10;
   object-fit: contain;
+  animation: blubBlink 3s infinite;
 
   @media (max-width: 1000px) {
     width: 400px;
     height: 400px;
     bottom: -15%;
+  }
+}
+
+@keyframes blubBlink {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
   }
 }
 
@@ -444,19 +457,21 @@ Footer */
 .footer {
   background-color: #12286f;
   padding: 20px 0;
+  margin-top: 20px;
   position: relative;
 }
 .footer__curved {
   z-index: 12;
-  top: -110px;
+  top: -120px;
   height: 120px;
-  background: url(../images/footer/ellipse-1.svg) center 0 / 130% no-repeat;
+  background: url(../images/footer/ellipse-1.svg) center 0 / 170% no-repeat;
 }
+
 .footer__curved-line {
   z-index: 11;
-  top: -110px;
+  top: -120px;
   height: 120px;
-  background: url(../images/footer/ellipse-2.svg) center -3px / 130% no-repeat;
+  background: url(../images/footer/ellipse-2.svg) center -3px / 170% no-repeat;
 }
 
 .footer-container {

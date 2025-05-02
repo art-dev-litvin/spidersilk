@@ -39,6 +39,8 @@ FEATURES
   transform: translateY(-165px);
   position: relative;
   margin: 0 auto 0;
+  animation: bounceFeaturesImage 3s infinite ease;
+  transition: transform 0.2s ease 0s;
 
   @media (max-width: 1200px) {
     max-width: 500px;
@@ -52,7 +54,25 @@ FEATURES
 }
 
 .features__image:hover {
-  transform: translateY(-170px);
+  animation-play-state: paused;
+}
+
+@keyframes bounceFeaturesImage {
+  0% {
+    transform: translateY(-165px);
+  }
+  50% {
+    transform: translateY(-175px);
+  }
+  100% {
+    transform: translateY(-165px);
+  }
+  100.1% {
+    transform: translateY(-165px);
+  }
+  200% {
+    transform: translateY(-165px);
+  }
 }
 
 .features__rows {
@@ -341,6 +361,10 @@ Agentic Security */
   height: 80px;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease 0s;
+}
+.agentic-play-button:hover {
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
 .agentic-play-icon {
@@ -745,8 +769,9 @@ FAQ Section */
   color: var(--red-border);
 }
 .accordion-item.active .accordion-content {
-  display: block;
+  padding-bottom: 20px;
 }
+
 .accordion-item.active .accordion-icon {
   color: var(--red-border);
 }
@@ -802,11 +827,11 @@ FAQ Section */
 }
 
 .accordion-content {
-  padding: 0 0 20px;
-  display: none;
-}
-
-.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.2s ease;
+  transition-property: max-height, padding;
+  height: 100%;
   color: var(--text-dark-medium);
   font-size: 18px;
   line-height: 1.2;
