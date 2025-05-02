@@ -34,12 +34,10 @@
   --bg-light-blue-secondary: #7fa6d5;
   --success-green: #30c746;
 
-  /* Feature Icon Colors */
   --orange: #f96342;
   --pink: #f9427c;
-  --purple: #8542f9;
-  --yellow: #f9b942;
   --blue: #42a4f9;
+  --yellow: #f9b942;
 }
 
 * {
