@@ -63,6 +63,8 @@
 }
 
 .foundation__title {
+  margin-bottom: 30px;
+
   @media (max-width: 600px) {
     display: none;
   }
@@ -89,7 +91,7 @@
   }
 }
 .foundation__text:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 
   @media (max-width: 767px) {
     margin-bottom: 10px;
@@ -132,6 +134,7 @@ helps */
 }
 .helps__item {
   display: flex;
+  align-items: center;
   gap: 30px;
   border-radius: 20px;
   background: var(--white);
@@ -192,7 +195,7 @@ helps */
 }
 
 .helps__item-content-description {
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.2;
   color: var(--text-dark-medium);
 

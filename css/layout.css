@@ -532,8 +532,8 @@ Footer */
 
 .footer-left__text {
   font-family: "SF Pro Display", sans-serif;
-  font-size: 14px;
-
+  font-size: 13px;
+  font-weight: 300;
   line-height: 1.2;
 }
 
@@ -643,6 +643,10 @@ Footer */
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.footer-right__column-list-item {
+  line-height: 1.2;
 }
 
 .footer-right__column-list-item a {

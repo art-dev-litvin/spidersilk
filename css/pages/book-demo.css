@@ -12,9 +12,17 @@
 }
 .book-demo-container {
   display: flex;
-  gap: 20px;
+  gap: 109px;
   justify-content: space-between;
   align-items: flex-start;
+
+  @media (max-width: 1200px) {
+    gap: 80px;
+  }
+
+  @media (max-width: 1000px) {
+    gap: 50px;
+  }
 
   @media (max-width: 767px) {
     flex-direction: column;
@@ -28,6 +36,11 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-top: -65px;
+
+  @media (max-width: 767px) {
+    margin-top: -40px;
+  }
 }
 .demo-form__row.valid .demo-form__input {
   border: 1px solid var(--success-green);
@@ -68,8 +81,8 @@
 .demo-form__input-wrapper {
   position: relative;
 }
-.demo-form__input {
-  color: var(--dark-gray);
+.demo-form__input,
+.demo-form__textarea {
   font-weight: 700;
 }
 
@@ -81,6 +94,7 @@
   right: 16px;
   height: 19px;
   width: 19px;
+  background: white;
 }
 .demo-form__error {
   display: none;
@@ -191,6 +205,15 @@
   border: 1px solid rgba(0, 112, 243, 0.8);
 }
 
+.demo-form__input {
+  padding-right: 40px;
+}
+
+.demo-form__input,
+.demo-form__textarea {
+  color: var(--secondary-blue);
+}
+
 .demo-form__input,
 .demo-form__select {
   height: 56px;
@@ -258,7 +281,7 @@ Benefits */
 .demo-benefits__subtitle {
   color: var(--dark-gray);
   font-weight: 600;
-  font-size: 20px;
+  font-size: 19px;
   margin-bottom: 23px;
 
   @media (max-width: 1000px) {
@@ -277,9 +300,10 @@ Benefits */
 }
 .demo-benefits__list-item {
   color: var(--text-dark-medium);
-  font-size: 20px;
+  font-size: 19px;
+  line-height: 1.1;
   display: flex;
-  gap: 25px;
+  gap: 22px;
 
   @media (max-width: 1000px) {
     font-size: 18px;

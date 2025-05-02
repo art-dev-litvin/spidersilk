@@ -208,7 +208,6 @@ FEATURES
 }
 
 .features__feature-text {
-  font-weight: 500;
   font-size: 20px;
   line-height: 100%;
   text-align: center;
@@ -452,6 +451,9 @@ How It Works Section */
     height: 300px;
   }
 }
+.how-it-works__image img {
+  box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.1);
+}
 
 .how-it-works__steps {
   display: flex;
@@ -612,7 +614,7 @@ Integrations Section */
   }
 }
 
-.integrations-content h2 {
+.integrations-title {
   font-family: "Jost", sans-serif;
   font-size: 36px;
   font-weight: 700;
@@ -626,9 +628,9 @@ Integrations Section */
   }
 }
 
-.integrations-content p {
+.integrations-text {
   font-family: "SF Pro Display", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   margin-bottom: 30px;
   color: var(--text-dark-medium);
@@ -765,6 +767,9 @@ FAQ Section */
   background: var(--red-border);
 }
 
+.accordion-item.active .accordion-header {
+  padding: 11px 0px;
+}
 .accordion-item.active .accordion-title {
   color: var(--red-border);
 }
@@ -785,9 +790,10 @@ FAQ Section */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0px;
+  padding: 11px 0px 25px;
   cursor: pointer;
   gap: 10px;
+  transition: padding 0.2s ease 0s;
 }
 
 .accordion-title {
